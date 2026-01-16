@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Asset {
+  id        Int      @id @default(autoincrement())
+  symbol    String   @unique
+  name      String?
+  type      String   @default("STOCK")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  prices    Price[]
+}
+
+model Price {
+  id        Int      @id @default(autoincrement())
+  date      DateTime @default(now())
+  open      Float
+  high      Float
+  low       Float
+  close     Float
+  volume    Int
+  assetId   Int
+  asset     Asset    @relation(fields: [assetId], references: [id], onDelete: Cascade)
+}
