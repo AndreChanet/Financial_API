@@ -21,20 +21,26 @@ GET  /api/health         # Health check del sistema
 ## Tecnologías Utilizadas
 
 ### Entorno de ejecución, Frameworks y Lenguaje
+```text
 Node.js v24.12.0 (Entorno de ejecución JavaScript)
 TypeScript v5.9.3 (Lenguaje de programación)
 npm v11.6.2 (gestor de paquetes)
 ts-node v10.9.2 (Ejecutor: permite ejecutar archivos TypeScript directamente)
 Express v5.0.6 (Framework)
+```
 
 ### Capa de Datos
+```text
 PostgreSQL v9.11 (Base de datos)
 Prisma v4.16.2 (ORM: Permite interactuar con BDD mediante TypeScript)
 Yahoo Finance API (API de Yahoo, fuente externa de datos)
+```
 
 ### Lógica y Automatización
+```text
 node-cron v3.0.11 (Programación de tareas automáticas)
 Axios v0.9.36 (Cliente HTTP para realizar peticiones a la API)
+```
 
 
 ## Instalación
